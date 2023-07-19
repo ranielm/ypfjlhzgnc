@@ -10,6 +10,9 @@
         padding: 0;
         font-family: Arial, sans-serif;
       }
+      html {
+        scroll-behavior: smooth;
+      }
       header {
         background-color: #333;
         color: #fff;
@@ -21,20 +24,33 @@
         color: #fff;
         padding: 10px;
         text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        z-index: 1; /* Define o z-index para colocar o footer em um plano inferior */
       }
-      nav {
+      aside {
         background-color: #444;
+        color: #fff;
         padding: 10px;
         text-align: center;
+        width: 200px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 2; /* Define o z-index para colocar o aside em um plano superior */
       }
       a {
         color: white;
+        display: block;
+        padding: 5px;
+        text-decoration: none;
       }
       section {
-        padding: 20px;
-      }
-      aside {
-        background-color: #f9f9f9;
+        margin-left: 220px;
         padding: 20px;
       }
       figure {
@@ -59,27 +75,71 @@
       <h1>Meu Site</h1>
     </header>
 
-    <nav>
-      <a href="#main">Ir para o Conteúdo Principal</a>
-      <a href="#lateral">Ir para o Conteúdo Lateral</a>
-    </nav>
+    <aside>
+      <nav>
+        <a href="#section1">JavaScript Introdutório</a>
+        <a href="#section2">React JS</a>
+        <a href="#section3">Angular</a>
+        <a href="#section4">Vue</a>
+      </nav>
+    </aside>
 
-    <section id="main">
-      <h2>Conteúdo Principal</h2>
+    <section id="section1">
+      <h2>React Js</h2>
       <article>
-        <h3>Título do Artigo 1</h3>
-        <p>Conteúdo do Artigo 1...</p>
-      </article>
-      <article>
-        <h3>Título do Artigo 2</h3>
-        <p>Conteúdo do Artigo 2...</p>
+        <h3>Como aprender JavaScript Introdutório</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+          deserunt eius aliquam, aliquid labore laboriosam a ut quaerat illum
+          reprehenderit est id perspiciatis itaque dolor quibusdam recusandae
+          deleniti ex cupiditate!.
+        </p>
       </article>
     </section>
-
-    <aside id="lateral">
-      <h2>Conteúdo Lateral</h2>
-      <p>Este é o conteúdo lateral da página.</p>
-    </aside>
+    <section id="section2">
+      <h2>React Js</h2>
+      <article>
+        <h3>Como usar o ReactJS</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+          deserunt eius aliquam, aliquid labore laboriosam a ut quaerat illum
+          reprehenderit est id perspiciatis itaque dolor quibusdam recusandae
+          deleniti ex cupiditate!.
+        </p>
+      </article>
+    </section>
+    <section id="section3">
+      <h2>Angular</h2>
+      <article>
+        <h3>Como usar o Angular</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+          deserunt eius aliquam, aliquid labore laboriosam a ut quaerat illum
+          reprehenderit est id perspiciatis itaque dolor quibusdam recusandae
+          deleniti ex cupiditate!.
+        </p>
+      </article>
+      <figure>
+        <img src="caminho/para/imagem.jpg" alt="Descrição da imagem" />
+        <figcaption>Legenda da imagem</figcaption>
+      </figure>
+    </section>
+    <section id="section4">
+      <h2>VueJs</h2>
+      <article>
+        <h3>Como usar o VueJs</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+          deserunt eius aliquam, aliquid labore laboriosam a ut quaerat illum
+          reprehenderit est id perspiciatis itaque dolor quibusdam recusandae
+          deleniti ex cupiditate!.
+        </p>
+      </article>
+      <figure>
+        <img src="caminho/para/imagem.jpg" alt="Descrição da imagem" />
+        <figcaption>Legenda da imagem</figcaption>
+      </figure>
+    </section>
 
     <footer>
       <p>&copy; 2023 Meu Site. Todos os direitos reservados.</p>
